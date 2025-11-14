@@ -1,0 +1,5 @@
+{
+  "model": "gpt-3.5-turbo",
+  "language": "en",
+  "max_output_tokens": 500
+}

@@ -1,0 +1,16 @@
+Task:
+From the article, identify the three sentences that best capture the main idea of the text.
+
+Article:
+INPUT_PLACEHOLDER
+
+List:
+
+# Tablet decoding (en)
+Task:
+You are an expert epigrapher. The following is an ancient tablet. Provide a plausible translation and explain your reasoning step by step.
+
+Tablet text:
+INPUT_PLACEHOLDER
+
+Answer:

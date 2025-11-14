@@ -1,0 +1,20 @@
+[
+  {
+    "sentence": "拉夏王國（The Kingdom of Rasha）繁盛了數個世紀，直到賽蘭火山（Mount Seran）爆發，炙熱的灰燼將大地覆蓋，讓整個王國陷入了漫長的寂靜。",
+    "time": "",
+    "description": "賽蘭火山爆發導致拉夏王國陷入寂靜",
+    "relative_order": "1"
+  },
+  {
+    "sentence": "數十年後，倖存者們在塔倫河（River Thalen）附近重建家園，並將那一年定為重生紀元元年（the first year of the Rebirth Era）。",
+    "time": "數十年後",
+    "description": "倖存者在塔倫河附近重建家園，開始重生紀元",
+    "relative_order": "2"
+  },
+  {
+    "sentence": "到了重生紀元第五年，一座嶄新的神廟落成，用以祭祀在劫難中庇護他們的諸神。",
+    "time": "重生紀元第五年",
+    "description": "建立新神廟，祭祀庇護他們的諸神",
+    "relative_order": "3"
+  }
+]
