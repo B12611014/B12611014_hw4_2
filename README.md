@@ -62,7 +62,9 @@ nlp_lab2/
 │   └─ examples.txt
 │
 └─ game_main.py                  # 遊戲主程式
-
+└─ README.md
+└─ report.txt
+└─ requirements.txt
 
 ⸻
 
