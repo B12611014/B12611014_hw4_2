@@ -46,29 +46,59 @@ def chapter_1_flow(cfg, data):
     print('\n--- 第1章：遺跡探索 ---\n')
     print(data['ruins_description.txt'])
 
+    # --- 1. Key Sentences ---
     print('\n[任務] 從考古學家日誌中擷取關鍵句...')
     key_sents = extraction.extract_key_sentences(cfg, data['archaeologist_log.txt'])
     save_output('chapter1_key_sentences.txt', '\n'.join(key_sents))
 
+    print("\n--- Key Sentences ---")
+    for i, s in enumerate(key_sents, 1):
+        print(f"{i}. {s}")
+
+    # --- 2. Decoding ---
     print('\n[任務] 解讀古代石板片段...')
     decoded = decoding.decode_tablet(cfg, data['ancient_tablet.txt'])
     save_output('chapter1_decoded_text.txt', decoded)
 
+    print("\n--- Decoded Tablet ---")
+    print(decoded)
+
+    # --- 3. Events Extraction ---
     print('\n[任務] 從解碼文本中擷取事件與時間線...')
     events = extraction.extract_events(cfg, decoded)
-    save_output('chapter1_events.txt', '\n'.join([f"{i+1}. {e['event']} - {e.get('time','未知')}" for i,e in enumerate(events)]))
+    save_output(
+        'chapter1_events.txt',
+        '\n'.join([f"{i+1}. {e['event']} - {e.get('time','未知')}" for i, e in enumerate(events)])
+    )
 
+    print("\n--- Events ---")
+    for i, e in enumerate(events, 1):
+        print(f"{i}. 事件: {e['event']} | 時間: {e.get('time', '未知')}")
+
+    # --- 4. Reasoning ---
     print('\n[任務] 根據現有線索推理文明發展...')
     reasoning_text = reasoning.infer_cause(cfg, decoded, events)
     save_output('chapter1_reasoning.txt', reasoning_text)
 
+    print("\n--- Reasoning ---")
+    print(reasoning_text)
+
+    # --- 5. Dialogue ---
     print('\n[任務] 與古代 AI 對話（模擬）...')
     dialog = dialogue.talk_to_ancient(cfg, decoded)
     save_output('chapter1_dialogue.txt', dialog)
 
+    print("\n--- Ancient Dialogue ---")
+    print(dialog)
+
+    # --- 6. Summary ---
     final_summary = summary.make_summary(cfg, key_sents, decoded, events, reasoning_text)
     save_output('summary_1.txt', final_summary)
-    print('\n第1章完成，輸出檔案已存於 output/。')
+
+    print("\n--- Final Summary ---")
+    print(final_summary)
+
+    print('\n第1章完成！輸出檔案已存於 output/。\n')
 
 
 def chapter_2_flow(cfg, data):
